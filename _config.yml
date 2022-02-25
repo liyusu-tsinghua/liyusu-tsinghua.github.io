@@ -1,7 +1,8 @@
 # Site settings
-title: The Minimum Viable Model
-description: 'Artificial Intelligence trends and concepts made easy.' # this means to ignore newlines until "baseurl:"
-permalink: ':title:output_ext'
+# other than permlink done
+title: World in LI YUSU's Eye 
+description: 'to be changed through _config - descrip' # this means to ignore newlines until "baseurl:"
+permalink: ':title:output_ext' # idont know what's that for 
 baseurl: "/liyusu-tsinghua.github.io" # the subpath of your site, e.g. /blog
 url: "https://liyusu-tsinghua.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/assets/img/branding/MVM-logo-full.svg"
@@ -9,6 +10,7 @@ logo-icon: "/assets/img/branding/MVM-symbol.svg"
 logo-icon-SEO: "/assets/img/branding/MVM-symbol-black.png" # must be a non SVG file
 
 # Night/Dark mode
+# use the default
 # Default mode is "auto", "auto" is for auto nightshift
 # (19:00 - 07:00), "manual" is for manual toggle, and
 # "on/off" is for default on/off.
@@ -24,32 +26,39 @@ logo-dark: "/assets/img/branding/MVM-logo-full-dark.svg"
 highlight_theme: syntax-base16.monokai.dark # select a dark theme for the code highlighter if needed
 
 # Author settings
-author: Armando Maynez # add your name
+author: LI YUSU # add your name
+# upload later
 author-pic: Myself_Neon_grey.jpg
-about-author: Engineer, industry executive, research enthusiast. Avid learner with diverse interests in coding, machine learning, artificial intelligence and reinforcement learning. 17+ years of experience working in multinational corporations.
+about-author: i'm LI YUSU , a master student in NUS right now , i'm curious about all the theory people had developed , i'll shsare some of my understanding about them.
+
 
 # Contact links
-email: armando.maynez@gmail.com # Add your Email address
-phone: # Add your Phone number
-website: https://amaynez.github.io # Add your website
-linkedin: amaynez # Add your Linkedin handle
-github: amaynez # Add your Github handle
-twitter: '@MvmThe' # Add your Twitter handle
-bandcamp: armandomaynez # Add your Bandcamp username
-stackoverflow: stackoverflow # Add your stackoverflow account
+# done
+email: liyusu586@gmail.com # Add your Email address
+#phone: # Add your Phone number
+#website: https://amaynez.github.io # Add your website
+#linkedin: amaynez # Add your Linkedin handle
+#github: amaynez # Add your Github handle
+#twitter: '@MvmThe' # Add your Twitter handle
+#bandcamp: armandomaynez # Add your Bandcamp username
+#stackoverflow: stackoverflow # Add your stackoverflow account
 
 # Newsletter
-mailchimp: "https://github.us1.list-manage.com/subscribe/post?u=8ece198b3eb260e6838461a60&amp;id=397d90b5f4"
+# won't use it right now maybe use alipay later
+# mailchimp: "https://github.us1.list-manage.com/subscribe/post?u=8ece198b3eb260e6838461a60&amp;id=397d90b5f4"
 
 # Disqus
+# won't use right now
 discus_identifier: amaynez-github-io # Add your discus identifier
 comments_curtain: yes # leave empty to show the disqus embed directly
 
 # Tracker
-analytics: G-R8SZS2YBZK
-fbadmin: ar.maybach
+# i won't use tracker right now , to be set latter
+# analytics: G-R8SZS2YBZK
+# fbadmin: ar.maybach
 
 # Paginate
+# use the default
 paginate: 6
 paginate_path: 'page:num'
 words_per_minute: 200
