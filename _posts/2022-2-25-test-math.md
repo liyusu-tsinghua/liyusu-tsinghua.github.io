@@ -14,4 +14,4 @@ mathjax: yes
 
 this file is simply used to test mathjax:
 
-$\alpha_{\beta^{\gama}} * \sum_{1,2,3}^{4*5*6}$
+$\alpha_{\beta^{\gama}} * \sum_{1,2,3}^{456}$
