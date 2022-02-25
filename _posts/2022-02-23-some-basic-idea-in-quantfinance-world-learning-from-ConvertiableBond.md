@@ -55,7 +55,7 @@ $
 instead of 
 
 $
-intuition = p_{up} * \phi _{up} +  p_{down} * \phi _{down}
+intuition = p_{up} * \phi_{up} +  p_{down} * \phi_{down}
 $
 
 in fact the difference between 'replace' and 'intuition' is that the replace is not influnced by the probebility of the coin showing upside . if i use the 'replace' strategy , no matter how our 'god' cheating druing the coin game , we won't lose anthing . in another world , once the price of the chance is different from the price of the $replace$ we calculate , we can meke profile with a probebility of 100% .
