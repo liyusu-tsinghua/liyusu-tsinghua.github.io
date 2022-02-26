@@ -2,14 +2,14 @@
 layout: post
 read_time: true
 show_date: true
-title:  some basic idea in quant finance world learning from Convertiable Bond in Chinese market .
-date:   2022-02-23 13:32:20 -0600
-description: i'll show sth basic in quant's world --non-arbitradge-theory , through Convertiable Bond in Chinese market . this is also one of my homework , i hope this can help you understand the basic math structure in a quant's world . during the ilustration , i assume you hve never met this area , but you should have a basic understanding about PDE . if you just have an interest in this area and a little knowledge about math , but don't know where to start , follow me ,let's go !
-img: posts/20210125/Perceptron.jpg 
+title:  "some basic idea in quant finance world learning from Convertiable Bond in Chinese market ."
+date:   2022-02-23 
+img: posts/tobeupload.png
 tags: [QF],[basic idea],[homework],[qf5202],[ma4269]
 author: LI YUSU
 github:  liyusu-tsinghua/github.io
 mathjax: yes
+description: i'll show sth basic in quant's world --non-arbitradge-theory , through Convertiable Bond in Chinese market . this is also one of my homework , i hope this can help you understand the basic math structure in a quant's world . during the ilustration , i assume you hve never met this area , but you should have a basic understanding about PDE . if you just have an interest in this area and a little knowledge about math , but don't know where to start , follow me ,let's go !
 ---
 
 i'll show sth basic in quant's world --non-arbitradge-theory , through Convertiable Bond in Chinese market . this is also one of my homework , i hope this can help you understand the basic math structure in a quant's world . during the ilustration , i assume you hve never met this area , but you should have a basic understanding about PDE . if you just have an interest in this area and a little knowledge about math , but don't know where to start , follow me ,let's go !
@@ -101,11 +101,45 @@ $
 F(S,t) =S \partial_S F(S,t) +  \frac{(\partial_t + \frac{1}{2}\sigma^2(S,t)\partial_{SS})F(S,t)}{r(t)}
 $
 
-aka Black-Schole fomula. 
+aka Black-Schole fomula. thanks to Faymen , there is a fomula to connect parabolic partial differential equations (PDEs) and stochastic processes :
+
+Consider the partial differential equation :
+
+$$
+\frac{\partial u}{\partial t}(x,t) + \mu(x,t) \frac{\partial u}{\partial x}(x,t) + \tfrac{1}{2} \sigma^2(x,t) \frac{\partial^2 u}{\partial x^2}(x,t) -V(x,t) u(x,t) + f(x,t) = 0, 
+$$
+
+defined for all $$x \in \mathbb{R}$$ and $$t \in [0, T]$$, subject to the terminal condition
+
+$$u(x,T)=\psi(x), $$
+
+where μ, σ, ψ, ''V'', ''f'' are known functions, ''T'' is a parameter and $$ u:\mathbb{R}\times[0,T]\to\mathbb{R}$$ is the unknown. Then the Feynman–Kac formula tells us that the solution can be written as a [[conditional expectation]]
+
+$$ u(x,t) = E^Q\left[ \int_t^T e^{-  \int_t^r V(X_\tau,\tau)\, d\tau}f(X_r,r)dr + e^{-\int_t^T V(X_\tau,\tau)\, d\tau}\psi(X_T) \,\Bigg|\, X_t=x \right] $$
+
+under the [[probability measure]] Q such that ''X'' is an [[Itô calculus|Itô process]] driven by the equation
+
+$$dX = \mu(X,t)\,dt + \sigma(X,t)\,dW^Q,$$
+
+with $W^Q(t)$ is a Wiener process (also called Brownian motion) under ''Q'', and the initial condition for X(t) is X(t) = x .
+
+if we apply this trick to the B-S PDE , we find the measure Q is just function like the implied probablity we get from the analysis we've done in binominal tree . till here , theroitically we can sove any pricing problem using the idea that *there should not be arbitradge oppotunity* 
 
 ## do some modification to apply the PDE in a more realistic area : Convertiable Bond in Chinese market
 
+after going through this Nobel-level idea , you may wonder how such an obviously idea can win Nobel prize in 1997 , but the fact is that in this area , such an idea wasn't came up with until such a morden time . later i'll shoow some of my personal feeling about that idea . in the part 'summary'
+
+but now let's go to a more technically area : how to use this idea to price chinese convertiable bonds.
+
 ### simplify assumption : coonstant parameters without soft-call or soft-put neither divident , ignoring the transaction cost
+
+the first modification is change the terminal condition .
+
+during BS model , they simply considering a executive in the final time , hence the terminal condition is just 
+$$u(x,T)=\psi(x), $$
+but a convertiable bond can be execute at any time , which we call it American option . 
+
+
 
 ### realistic assumption : local parameters and transaction cost as a ressult of special tax machinism in chinese market .
 
