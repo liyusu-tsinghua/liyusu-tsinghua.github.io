@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title:  "some basic idea in quant finance world learning from Convertiable Bond in Chinese market ."
 date:   2022-02-23 
-img: posts/tobeupload.png
+img: posts/20220223/tobeupload.png  #posts/20210402/post7-header.webp
 tags: [QF],[basic idea],[homework],[qf5202],[ma4269]
 author: LI YUSU
 github:  liyusu-tsinghua/github.io
