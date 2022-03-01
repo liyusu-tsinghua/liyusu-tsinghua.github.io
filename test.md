@@ -1,17 +1,3 @@
----
-layout: post
-read_time: true
-show_date: true
-title:  "some basic idea in quant finance world learning from Convertiable Bond in Chinese market ."
-date:   2022-02-23 
-img: posts/20220223/tobeupload.png  #posts/20210402/post7-header.webp
-tags: [QF],[basic idea],[homework],[qf5202],[ma4269]
-author: LI YUSU
-github:  liyusu-tsinghua/github.io
-mathjax: yes
-description: i'll show sth basic in quant's world --non-arbitradge-theory , through Convertiable Bond in Chinese market . this is also one of my homework , i hope this can help you understand the basic math structure in a quant's world . during the ilustration , i assume you hve never met this area , but you should have a basic understanding about PDE . if you just have an interest in this area and a little knowledge about math , but don't know where to start , follow me ,let's go !
----
-
 - [what is arbitradge](#what-is-arbitradge )
 - [from the toy-model to a useful model : binomimal tree](#from-the-toy-model-to-a-useful-model-binomimal-tree )
 - [apply the idea from the tree : <img src="https://latex.codecogs.com/gif.latex?&#x5C;Delta"/> hedging and the Black-Schole PDE](#apply-the-idea-from-the-tree-delta-hedging-and-the-black-schole-pde )
@@ -43,13 +29,6 @@ what if we sue a linear combination of tesla's share and some cash in the bank t
   
 we get :
   
-<<<<<<< HEAD
-<img src="https://latex.codecogs.com/gif.latex?replace%20=&#x5C;begin{cases}&#x5C;alpha%20*%20(S%20+%20100)%20+%20&#x5C;beta%20*%20cash%20*%20(1+r)%20&#x5C;text{%20,%20god&#x27;s%20coin%20show%20upside}%20&#x5C;&#x5C;&#x5C;alpha%20*%20(S%20-%20100)%20+%20&#x5C;beta%20*%20cash%20*%20(1+r)%20&#x5C;text{%20,%20god&#x27;s%20coin%20show%20downside%20}&#x5C;end{cases}"/>
-  
-let <img src="https://latex.codecogs.com/gif.latex?chance%20=%20replace"/> we get 
-  
-<img src="https://latex.codecogs.com/gif.latex?&#x5C;begin{cases}&#x5C;alpha%20*%20(S%20+%20100)%20+%20&#x5C;beta%20*%20cash%20*%20(1+r)%20=%20S%20+%20100%20&#x5C;text{%20,%20god&#x27;s%20coin%20show%20upside}%20&#x5C;&#x5C;&#x5C;alpha%20*%20(S%20-%20100)%20+%20&#x5C;beta%20*%20cash%20*%20(1+r)%20=%20100%20&#x5C;text{%20,%20god&#x27;s%20coin%20show%20downside}&#x5C;end{cases}"/>
-=======
 <img src="https://latex.codecogs.com/gif.latex?replace%20=
 &#x5C;begin{cases}
 &#x5C;alpha%20*%20(S%20+%20100)%20+%20&#x5C;beta%20*%20cash%20*%20(1+r)%20,%20(god&#x27;s%20&#x5C;%20coin&#x5C;%20%20show%20&#x5C;%20upside%20)%20&#x5C;&#x5C;
@@ -62,7 +41,6 @@ let <img src="https://latex.codecogs.com/gif.latex?chance%20=%20replace"/> we ge
 &#x5C;alpha%20*%20(S%20+%20100)%20+%20&#x5C;beta%20*%20cash%20*%20(1+r)%20=%20S%20+%20100,%20(god&#x27;s%20&#x5C;%20coin&#x5C;%20%20show%20&#x5C;%20upside%20)%20&#x5C;&#x5C;
 &#x5C;alpha%20*%20(S%20-%20100)%20+%20&#x5C;beta%20*%20cash%20*%20(1+r)%20=%20100,%20(god&#x27;s%20&#x5C;%20coin&#x5C;%20%20show%20&#x5C;%20downside%20)
 &#x5C;end{cases}"/>
->>>>>>> 75b327ee39494106b47f019c88e9fe9a93152a5b
   
 that is to say <img src="https://latex.codecogs.com/gif.latex?&#x5C;begin{cases}%20&#x5C;alpha%20=%20&#x5C;frac{S}{200}%20&#x5C;&#x5C;%20&#x5C;beta%20=%20&#x5C;frac{S%20+%20200%20-%20S^2&#x2F;100}{2*(1+r)%20*%20cash}%20&#x5C;end{cases}"/> and <img src="https://latex.codecogs.com/gif.latex?replace%20=%20&#x5C;frac{S^2}{200}%20+%20&#x5C;frac{S%20+%20200%20-%20S^2&#x2F;100}{2*(1+r)%20}"/> obviously that is different from our intuition answer . in fact if we use <img src="https://latex.codecogs.com/gif.latex?&#x5C;phi_{up}%20,%20&#x5C;phi_{down}"/> to denote <img src="https://latex.codecogs.com/gif.latex?S+100%20,%20100"/> , <img src="https://latex.codecogs.com/gif.latex?S_{up}%20,%20S_{down}"/> to denote <img src="https://latex.codecogs.com/gif.latex?S+100,S-100"/> , <img src="https://latex.codecogs.com/gif.latex?S%20*%20(1+r)"/> denoted by <img src="https://latex.codecogs.com/gif.latex?S_{-}"/> , we have:
   
@@ -283,11 +261,7 @@ we do things step by step .
   
 first we input the market interest rate and market sigma , instead of the constent we used in last part , and recalculate the price , to judge how much difference are there between our reimplied price and the market price .
   
-<<<<<<< HEAD
-second , let's consider transaction cost : if there is transaction cost , we can't apply <img src="https://latex.codecogs.com/gif.latex?&#x5C;Delta"/> hedging like before , because changing <img src="https://latex.codecogs.com/gif.latex?&#x5C;Delta"/> will cost additinaol money , so only if we can sell(/buy) the convertiable bond in a higher(/lower) price can we get arbitradge oppotunity .
-=======
 second , let's consider transaction cost : if there is transaction cost , we can't apply <img src="https://latex.codecogs.com/gif.latex?&#x5C;Delta"/> hedging like before , because changing \Delta will cost additinaol money , so only if we can sell(/buy) the convertiable bond in a higher(/lower) price can we get arbitradge oppotunity .
->>>>>>> 75b327ee39494106b47f019c88e9fe9a93152a5b
   
 ####  code
   
@@ -305,53 +279,3 @@ second , let's consider transaction cost : if there is transaction cost , we can
   
 ##  summary & persinal idea of LI YUSU
   
-<<<<<<< HEAD
-  
-  
-  
-=======
-
-
->>>>>>> 75b327ee39494106b47f019c88e9fe9a93152a5b
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
