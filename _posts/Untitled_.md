@@ -1,17 +1,5 @@
----
-layout: post
-read_time: true
-show_date: true
-title:  "some basic idea in quant finance world learning from Convertiable Bond in Chinese market ."
-date:   2022-02-23 
-img: posts/20220223/tobeupload.png  #posts/20210402/post7-header.webp
-tags: [QF],[basic idea],[homework],[qf5202],[ma4269]
-author: LI YUSU
-github:  liyusu-tsinghua/github.io
-mathjax: yes
-description: i'll show sth basic in quant's world --non-arbitradge-theory , through Convertiable Bond in Chinese market . this is also one of my homework , i hope this can help you understand the basic math structure in a quant's world . during the ilustration , i assume you hve never met this area , but you should have a basic understanding about PDE . if you just have an interest in this area and a little knowledge about math , but don't know where to start , follow me ,let's go !
----
-
+  
+  
 - [what is arbitradge](#what-is-arbitradge )
 - [from the toy-model to a useful model : binomimal tree](#from-the-toy-model-to-a-useful-model-binomimal-tree )
 - [apply the idea from the tree : <img src="https://latex.codecogs.com/gif.latex?&#x5C;Delta"/> hedging and the Black-Schole PDE](#apply-the-idea-from-the-tree-delta-hedging-and-the-black-schole-pde )
@@ -285,3 +273,10 @@ second , let's consider transaction cost : if there is transaction cost , we can
 3. soft-call soft-put is not easy to be inclouded in the model , because , it's a strong path deependent . we may try monte-carlo later 
   
 ##  summary & persinal idea of LI YUSU
+  
+  
+  
+```python
+  
+```
+  
